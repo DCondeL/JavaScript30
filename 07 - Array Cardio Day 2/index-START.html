@@ -38,7 +38,11 @@
 
     // Array.prototype.findIndex()
     // Find the comment with this ID
+    let commentToDelete = comments.findIndex((comment)=> comment.id == 823423);
+    console.log(commentToDelete);
     // delete the comment with the ID of 823423
+    comments.splice(commentToDelete, 1);
+    console.table(comments);
 
   </script>
 </body>
