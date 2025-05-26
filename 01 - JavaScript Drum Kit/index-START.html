@@ -59,7 +59,14 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
 <script>
+  function playSound(e){
+    console.log(e.keyCode);
+    let pressedKey = document.querySelector(`[data-key="${e.keyCode}"]`);
+    pressedKey.classList.add("playing");
 
+  }
+
+  window.addEventListener("keydown", playSound);
 </script>
 
 
